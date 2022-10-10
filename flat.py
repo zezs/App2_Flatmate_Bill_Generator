@@ -1,3 +1,6 @@
+master_list = []
+
+
 class Bill:
     """
     Object that contains data about a bill,
@@ -18,6 +21,7 @@ class Flatmate:
     def __init__(self, name, days_in_house):
         self.name = name
         self.days_in_house = days_in_house
+        master_list.append(self)
 
     def pays(self, bill, all_flatmate_days):
         weight = self.days_in_house / all_flatmate_days
